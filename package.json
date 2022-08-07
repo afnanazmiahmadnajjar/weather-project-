@@ -1,0 +1,13 @@
+{
+  "author": "afnan",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "handlebars": "^4.7.7",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.3",
+    "urllib": "^2.38.0"
+  }
+}

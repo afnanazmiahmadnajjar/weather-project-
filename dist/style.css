@@ -1,0 +1,85 @@
+body {
+  background-image: url(https://www.lstatic.org/UserFiles/images/Arab-and-World/Diverts/Large/weather-cloudy.jpg);
+  color: black;
+  font-size: 18px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 95%;
+  margin-top: 10px;
+}
+
+#btn-search {
+  padding: 10px;
+  font-size: 1.5vw;
+  width: auto;
+}
+
+#city-input {
+  padding: 10px;
+  font-size: 1.5vw;
+  width: 90%;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.city-name {
+  display: grid;
+  grid-area: cname;
+  margin: auto;
+  font-size: 30px;
+}
+
+.temperature {
+  display: grid;
+  grid-area: temp;
+  margin: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-area: but;
+  margin: auto;
+}
+
+.city-weather-image {
+  display: grid;
+  grid-area: Cimg;
+  margin: auto;
+}
+
+.city-condition {
+  display: grid;
+  grid-area: cond;
+  margin: auto;
+}
+
+.city {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "but cname cname Cimg Cimg "
+    "but cname cname Cimg Cimg"
+    "but cname cname Cimg Cimg"
+    "but temp temp cond cond";
+  align-items: center;
+  margin: 5px;
+  background: transparent;
+  border-radius: 1px;
+  box-shadow: #040404 2px 2px 4px;
+}
+
+.add-city {
+  cursor: pointer;
+  display: inline-block;
+  transition: opacity 0.15s;
+}
+#date {
+  color: black;
+  padding-left: 4px;
+}

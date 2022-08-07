@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./sweetalert2/dist/sweetalert2.js"></script>
+    <script src="./axios/dist/axios.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <script id="city-template" type="text/x-handlebars-template">
+        {{#each data}}
+            <div class="city">
+                <div class="buttons">
+                    {{#if isInDatabase}}
+                        <button type="button" class="remove-city">Remove</button>
+                        <button type="button" class="refresh-city">refresh</button>
+                        <p  id="date">Last Update : {{date}}</p>
+                    {{else}}
+                        <button type="button" class="add-city">add</button>
+                    {{/if}}
+                    
+                </div>
+                <p class="temperature">{{temperature}}°</p>
+                <h5 class="city-name">{{name}}</h5>
+                <img class="city-weather-image " src="{{conditionPic}}" alt="City Weather Image">
+                <p class="city-condition ">{{condition}}</p>
+                  
+            </div>
+        {{/each}}
+    </script>
+    <input type="text" id="city-input" placeholder="City Search">
+    <button id="btn-search" onclick="handleSearch()">Search</button><br>
+    <div class="cities">
+    </div>
+    <script src="tempManager.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
